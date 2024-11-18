@@ -9,7 +9,7 @@
     "test": "ng test",
     "serve:ssr:a18": "node dist/a18/server/server.mjs"
   },
-  "private": true,
+ 
   "dependencies": {
     "@angular/animations": "^18.0.0",
     "@angular/cdk": "^18.2.0",
