@@ -1,0 +1,147 @@
+<form [formGroup]="membreFrom" (ngSubmit)="formSubmit()">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-body">
+                <div class="my-2 heading">
+                    {{isEdit ?'Update':'Add New'}} Membership Details
+                </div>
+                <!-- <div class="mb-4 text-center alert alert-primary heading">
+                    Membership Details
+                </div> -->
+
+                <div class="row my-2 p-3">
+                    <!-- <div class="col-12 my-2 d-flex">
+                        <label class="form-label asterisk mx-1">Membership No.</label>
+                        <span></span>
+                    </div> -->
+
+                    <div class="col-12 mb-4">
+
+                        <div class="d-flex">
+                            <input class="form-check-input mx-2" type="checkbox" formControlName="isNewMember" id="isNewMemberCheckbox">
+                            <label class="form-label cursor-pointer" for="isNewMemberCheckbox">
+                                New Membership
+                                </label>
+                        </div>
+
+                  </div>
+        
+                    <div class="col-12 col-md-4 mb-4">
+                        <label class="form-label asterisk">Full Name </label>
+                        <input type="text" formControlName="memberName" class="form-control">
+                    </div>
+
+                    <div class="col-12 col-md-4 mb-4">
+                        <label class="form-label">Date of Birth </label>
+                        <input type="date" formControlName="dob" class="form-control">
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <label class="form-label">Aadhar Number</label>
+                        <input type="text" formControlName="aadharNo" class="form-control">
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <label class="form-label">PAN Number</label>
+                        <input type="text" formControlName="panNo" class="form-control">
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <label class="form-label">Email</label>
+                        <input type="text" formControlName="email" class="form-control">
+                    </div>
+
+                    <div class="col-12 col-md-4 mb-4">
+                        <label class="form-label">Phone</label>
+                        <input type="text" formControlName="phone" class="form-control">
+
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <label class="form-label">Gender</label>
+                        <select formControlName="gender" class="form-select" aria-label="Default select example">
+                            <option selected value="Male">Male</option>
+                            <option value="Female">Female</option>
+                      
+                          </select>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <label class="form-label">Membership Type</label>
+                        <select formControlName="memberShipType" class="form-select" aria-label="Default select example">
+                            <option selected>Select Type</option>
+                            <option value="single">Single</option>
+                            <option value="couple">Couple</option>
+                            <option value="group">Group</option>
+                          </select>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <label class="form-label">Plan Type</label>
+                        <select formControlName="planType" class="form-select" aria-label="Default select example">
+                            <option selected>Select Type</option>
+                            <option value="gym">GYM</option>
+                            <option value="cardio">Cardio</option>
+                            <option value="gym_cardio">GYM + Cardio</option>
+                          </select>
+                    </div>
+                    <div class="col-12 col-md-6 mb-4">
+                        <label class="form-label">Address</label>
+                        <textarea class="form-control" formControlName="address"></textarea>
+                    </div>
+                    <div class="col-12 col-md-6 mb-4">
+                        <label class="form-label">Madical History</label>
+                        <textarea class="form-control" formControlName="medicalHistory"></textarea>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <label class="form-label">Profile Photo</label>
+                        <input type="file" class="form-control" formControlName="profilePhoto">
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <label class="form-label">Aadhar Card</label>
+                        <input type="file" class="form-control" formControlName="aadharCardPhoto">
+                    </div>
+                    <div class="col-12 col-md-4 mb-4">
+                        <label class="form-label">PAN Card</label>
+                        <input type="file" class="form-control" formControlName="panCardPhoto">
+                    </div>
+                    <!-- view photo pending -->
+  
+        
+                </div>
+                <!-- <div class="my-4 text-center alert alert-primary heading">
+                    Membership Gym Details
+                </div> -->
+
+                <div class="row">
+        
+
+                    <!-- <div class="col-12 col-md-6 mb-4">
+                        <label class="form-label">Membership Type </label>
+                        <div class="d-flex">
+                            <div class="form-check mx-2">
+                                <input class="form-check-input" type="radio" name="memberShipType" formControlName="memberShipType" id="single">
+                                <label class="form-check-label" for="single">
+                                  Single
+                                </label>
+                              </div>
+                              <div class="form-check mx-2">
+                                <input class="form-check-input" type="radio" name="memberShipType" formControlName="memberShipType" id="couple" checked>
+                                <label class="form-check-label" for="couple">
+                                  Couple
+                                </label>
+                              </div>
+                              <div class="form-check mx-2">
+                                <input class="form-check-input" type="radio" name="memberShipType" formControlName="memberShipType" id="group" checked>
+                                <label class="form-check-label" for="group">
+                                  Group
+                                </label>
+                              </div>
+                        </div>
+              
+                    </div> -->
+
+                </div>
+
+                <div class="my-2 d-flex justify-content-end align-items-center">
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                    <button type="submit" class="btn btn-primary mx-2">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,21 @@
+.right-menu{
+   display: flex;
+   justify-content: start;
+}
+
+.add-btn{
+    border-radius: 10px;
+    background-color: rgb(41, 172, 8);
+    color: #fff;
+    border: none;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout{
+    cursor: pointer;
+    color: #fff;
+    margin: 0 5px;
+}

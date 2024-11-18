@@ -1,0 +1,40 @@
+<div class="container-fluid h-100">
+    <div class="row h-100 align-items-center">
+        <div class="col-12 col-md-7 col-lg-6 m-auto">
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-blue mb-4 d-flex justify-content-start align-items-center">
+                      <mat-icon class="mx-2">mail</mat-icon>
+                    Send message
+                  </h5>
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Select Email</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected value="">Select Email</option>
+                                @for (item of emailList; track $index) {
+                                    <option [value]="item">{{item}}</option>
+
+                                }
+                              </select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control"></textarea>
+                        </div>
+
+                        <div class="mb-3 d-flex justify-content-end align-items-center">
+                            <button type="reset" class="btn btn-secondary">
+                                Reset                                
+                            </button>
+                            <button type="submit" class="btn btn-success mx-2 d-flex justify-content-center align-items-center">
+                                Send
+                                <mat-icon class="mx-1">send</mat-icon>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+
+.member-header{
+padding: 10px;
+}  
+table {
+  width: 100%;
+}
+
+tr.example-detail-row {
+  height: 0;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #efefef;
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.example-element-diagram {
+  min-width: 80px;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
+}
+
+.example-element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.example-element-description {
+  padding: 16px;
+}
+
+.example-element-description-attribution {
+  opacity: 0.5;
+}
+
+.data-action{
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.document-img{
+  display: flex;
+
+}
+
+.profile-photo{
+  width: 100px;
+  height: 100px;
+  background-color: rgb(194, 192, 192);
+  border-radius: 10px;
+  margin: 0 5px;
+}

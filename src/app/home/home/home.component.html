@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="col-md-4 col-12" *ngFor="let item of memberList">
+            <div class="mycard" [ngClass]="item.className">
+                <div class="card-header">
+                    {{item.title}}
+                </div>
+
+                <div class="count">{{item.count}}</div>
+            </div>
+        </div>
+    </div>
+
+    @defer {
+          <app-view-member></app-view-member>
+
+      }
+
+</div>

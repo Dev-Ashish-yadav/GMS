@@ -1,0 +1,18 @@
+<mat-sidenav-container>
+    <!-- push,over,side -->
+    <mat-sidenav #sideStatus mode="side" (closed)="sideBarOpenClose(false)" (opened)="sideBarOpenClose(true)" [opened]="appService.sideBarStatus()">
+        <app-side-menu></app-side-menu>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div class="wrapper">
+            <app-header></app-header>
+            <div class="main-container">
+
+                <main>
+                    <router-outlet />
+                </main>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

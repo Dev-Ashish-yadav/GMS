@@ -1,0 +1,18 @@
+<div>
+    <div class="brand">
+        <div class="profile-photo">
+            <img src="/assets/profile.png" alt="">
+        </div>
+        <div class="profile-title">
+            CHAMPIONS GYM
+        </div>
+    </div>
+    <ul class="list-group">
+        @for (item of sideMenuList; track $index) {
+            <li class="list-group-item" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active" [routerLink]="item.routing">
+                <mat-icon class="me-2">{{item.icon}}</mat-icon>
+                {{item.name}}
+            </li>
+        }
+      </ul>
+</div>

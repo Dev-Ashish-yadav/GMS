@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-md navbar-dark" style="background-color: var(--color-blue);">
+    <div class="container-fluid">
+      <div class="navbar-brand">
+        <mat-icon class="cursor-pointer" (click)="toggleSideBar()">menu</mat-icon>
+      </div>
+      <!-- <button  (click)="toggleSideBar()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <div class="nav-link active" aria-current="page">
+              CHAMPIONS GYM
+            </div>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <div class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </div>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><div class="dropdown-item" href="#">Action</div></li>
+              <li><div class="dropdown-item" href="#">Another action</div></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><div class="dropdown-item" href="#">Something else here</div></li>
+            </ul>
+          </li> -->
+        </ul>
+      </div>
+
+      <div class="right-menu">
+        <button routerLink="add-member" type="button" class="add-btn">
+          <mat-icon>add</mat-icon>
+          Add</button>
+        <mat-icon class="logout" (click)="logout()">logout</mat-icon>
+      </div>
+    </div>
+  </nav>

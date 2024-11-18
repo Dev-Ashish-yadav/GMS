@@ -1,0 +1,40 @@
+<div class="maindiv">
+    <img src="assets/banner.jpg" alt="" srcset="">
+    <div class="login-box">
+        <div class="login-header">
+            <img class="imghw" src="assets/logo.jpeg" alt="">
+            <header>Login</header>
+        </div>
+        <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+            <div class="input-box">
+                <input type="text" class="input-field" formControlName="username" placeholder="Username"
+                    autocomplete="off" required>
+                <div *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.invalid">
+                    <small class="error-message" *ngIf="loginForm.get('username')?.errors?.['required']">
+                        Username is required.
+                    </small>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" formControlName="password" placeholder="Password"
+                    autocomplete="off" required>
+                <small class="error-message" *ngIf="loginForm.get('password')?.errors?.['required']">
+                    Password is required.
+                </small>
+            </div>
+            <div class="forgot">
+                <section>
+                    <input type="checkbox" id="check">
+                    <label for="check">Remember me</label>
+                </section>
+                <section>
+                    <a href="#">Forget password</a>
+                </section>
+            </div>
+            <div class="input-submit">
+                <button type="submit" class="submit-btn" id="submit" [disabled]="loginForm.invalid"></button>
+                <label for="submit">Sign In</label>
+            </div>
+        </form>
+    </div>
+</div>
